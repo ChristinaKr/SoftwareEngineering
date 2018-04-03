@@ -1,0 +1,50 @@
+\documentclass[a4paper, 12pt, oneside, openright, english]{memoir}
+\usepackage{mypreamble}
+
+\includeonly{%
+  frontmatter/titlepage,
+  frontmatter/abstract,
+  frontmatter/toc,
+  frontmatter/lof,
+  frontmatter/lot,
+  chapters/chap1,
+  chapters/chap2,
+  chapters/chap3,
+  chapters/chap4,
+  chapters/chap5,
+  chapters/chap6,
+  appendices/appendixA,
+  appendices/appendixB,
+  appendices/appendixC,
+  appendices/appendixD,
+  bibliography,
+}
+
+\begin{document}
+  \frontmatter
+  \include{frontmatter/titlepage}
+  \include{frontmatter/abstract}
+  \include{frontmatter/toc}
+  \include{frontmatter/lof}
+  \include{frontmatter/lot}
+
+  \mainmatter
+  \setlength{\beforechapskip}{0pt}
+  \include{introduction}
+  \include{chapters/chap1}
+  \include{chapters/chap2}
+  \include{chapters/chap3}
+  \include{chapters/chap4}
+  \include{chapters/chap5}
+  \include{chapters/chap6}
+
+  \appendix
+    \include{appendices/appendixA}
+    \include{appendices/appendixB}
+    \include{appendices/appendixC}
+    \include{appendices/appendixD}
+  
+  \backmatter
+    \include{bibliography}
+
+\end{document}

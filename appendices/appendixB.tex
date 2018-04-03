@@ -1,0 +1,386 @@
+\chapter{Requirements Revisited}
+\label{appendix:requirements_revisited}
+
+\section{Functional Requirements}
+
+\definecolor{Gray}{gray}{0.9}
+\newcolumntype{r}{>{\columncolor{Gray}}p{2.5cm}}
+\newcolumntype{o}{>{\columncolor{Gray}}p{2.5cm}}
+\newcolumntype{n}{p{5cm}}
+
+\subsection{User}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow for the registration of new Users.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-C-1 (Table \ref{use_case_u-c-1})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Visitor}            & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the creation of new Users.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-C-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-C-2 (Table \ref{use_case_u-c-2})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a User's own profile.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-V-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-E (Table \ref{use_case_u-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Host}        & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to view any User profile.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-V-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-E (Table \ref{use_case_u-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a list of User profiles.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{10}{p{12.5cm}|}{R-U-L-1}  \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to filter a list of Users by certain criteria.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{10}{p{12.5cm}|}{R-U-L-2}  \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a User to edit their own Account Details.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-E-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-E (Table \ref{use_case_u-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Host}        & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to edit any User's Account Details.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-E-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-E (Table \ref{use_case_u-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to ban a User from using the System.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-U-O-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{U-E (Table \ref{use_case_u-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{User} \\ \hline
+\end{tabular}
+
+\subsection{Property}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to register a new Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-C (Table \ref{use_case_p-c})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display information about a Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-V-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-V (Table \ref{use_case_p-v})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Host, Admin} & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a list of Properties.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-L-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-L (Table \ref{use_case_p-l})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin}       & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a User to filter a list of Properties by certain criteria.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-L-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-L (Table \ref{use_case_p-l})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin}       & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to edit their own Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-E-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-E (Table \ref{use_case_p-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to delete their own Property from the System.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-D-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-D (Table \ref{use_case_p-d})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to delete Properties from the System.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-P-D-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-D (Table \ref{use_case_p-d})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a User to share Property Details with their contacts.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{10}{p{12.5cm}|}{R-P-O-1} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Property} \\ \hline
+\end{tabular}
+
+\subsection{Rooms}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the addition of Rooms to a Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Ro-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-E (Table \ref{use_case_p-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Room} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to edit their Property's Rooms.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Ro-E-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-E (Table \ref{use_case_p-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Room} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to delete their Property's Rooms.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Ro-D-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-E (Table \ref{use_case_p-e})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Room} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display all available Rooms in a Property for a given date.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Ro-O-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-V (Table \ref{use_case_p-v})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin, Host} & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Room} \\ \hline
+\end{tabular}
+
+\subsection{Bookings}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the creation of Bookings for a Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-C (Table \ref{use_case_b-c})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Guest to view their own Booking.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-V-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-L-1 (Table \ref{use_case_B-L-1})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Host to view a Booking on their Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-V-2}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-L-2 (Table \ref{use_case_B-L-2})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Host}               & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow an Admin to view any Booking.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-V-3}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-L-1 \& B-L-2 (Table \ref{use_case_B-L-1} \& \ref{use_case_B-L-2})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a Guest or Property's Booking history.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-L-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-L-1 \& B-L-2 (Table \ref{use_case_B-L-1} \& \ref{use_case_B-L-2})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin}       & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the cancellation of a Booking.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-O-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-D (Table \ref{use_case_b-d})}    \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin, Host} & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall send email confirmations to confirm a new Booking.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-B-O-2}  & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{B-C (Table \ref{use_case_b-c})}    \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Host}        & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Booking} \\ \hline
+\end{tabular}
+
+\subsection{Policies}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the creation of Policies.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Po-C-1}           & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{Po-C (Table \ref{use_case_po-c})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Policy} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a list of existing Policies.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{10}{p{12.5cm}|}{R-Po-L-1}             \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Policy} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the deletion of Policies.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-Po-D-1}           & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{Po-D (Table \ref{use_case_po-d})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Admin}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Policy} \\ \hline
+\end{tabular}
+
+\subsection{Ratings}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow Guests to give Ratings to Properties they have visited.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-R-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{R-C (Table \ref{use_case_r-c})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Rating} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall display a list of Ratings for a given Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-R-L-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{P-V (Table \ref{use_case_p-v})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin, Host} & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Rating} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow the deletion of Ratings for a given Property.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{10}{p{12.5cm}|}{R-R-D-1}        \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest, Admin, Host} & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Rating} \\ \hline
+\end{tabular}
+
+\subsection{Favourites}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Guest to add Properties to a list of Favourites.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-F-C-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{F-C (Table \ref{use_case_f-c})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Favourites} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Guest to view a list of their favourite Properties.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-F-L-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{F-L (Table \ref{use_case_f-l})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Favourites} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall allow a Guest to remove a Property from their list of favourite Properties.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-F-D-1}            & \multicolumn{2}{|o|}{Use Case}    & \multicolumn{4}{n|}{F-D (Table \ref{use_case_f-d})} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Functional}         & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+    \multicolumn{2}{|o|}{Actor(s)}    & \multicolumn{4}{n}{Guest}              & \multicolumn{2}{|o|}{Entity}      & \multicolumn{4}{n|}{Favourites} \\ \hline
+\end{tabular}
+
+\section{Non-Functional Requirements}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall be written in a commonly used programming language.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-C-1}            & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Code} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall use a relational database system.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-C-2}            & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Code} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall be able to backup information.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-R-1}            & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Reliability} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Could Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall not lose any data.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-R-2}            & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Reliability} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall have a high uptime.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-R-3}            & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Reliability} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall be well documented.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-Su-1}           & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Supportability} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall provide helpful error messages.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-Su-2}           & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Supportability} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Should Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall store customer information securely.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-Se-1}           & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Security} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+\end{tabular}
+
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{2}{|o|}{Description} & \multicolumn{10}{p{12.5cm}|}{The System shall store account details securely.} \\ \hline
+    \multicolumn{2}{|o|}{ID}          & \multicolumn{4}{n}{R-N-Se-2}           & \multicolumn{2}{|o|}{Category}    & \multicolumn{4}{n|}{Security} \\ \hline
+    \multicolumn{2}{|o|}{Type}        & \multicolumn{4}{n}{Non-functional}     & \multicolumn{2}{|o|}{Priority}    & \multicolumn{4}{n|}{Must Have}  \\ \hline
+\end{tabular}

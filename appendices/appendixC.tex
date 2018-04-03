@@ -1,0 +1,354 @@
+\chapter{Use Cases}
+\label{appendix:use-cases}
+
+\section{General}
+
+The following processes are not full use cases as they are thought of in this report (see Chapter \ref{chapter:use cases}, but we have described them in a similar fashion to our use cases for completeness.
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| q | p{12cm}@\qquad |}
+      \hline
+      Use case snippet & Log in \\ \hline
+      Description & An Admin, Guest or Host logs in to the System.\\ \hline
+      Primary Actor & Admin/Guest/Host (henceforth, "the User") \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & The User is Verified, not Banned, and has not logged in yet.
+      \\ \hline
+      Main Flow &
+      \vspace{-0.3cm}
+        \begin{enumerate}
+            \item The use case snippet starts when the User specifies their email address and password. 
+            \item The User submits their email address and password.
+            \item \label{login-fork} The System checks if the email address and password are part of some User's User Details and whether said User is Verified and not Banned.
+            \begin{enumerate}
+                \item \label{login-success}If the email and password are part of some Verified, non-Banned User's User Details: the System allows the User to log in. Go to \ref{login-end}.
+                \item \label{login-failure}(END)If not: the System displays the Landing Page, along with a notification about the issue encountered.
+            \end{enumerate}
+            \item \label{login-end}(END)
+            \begin{itemize}
+                \item For Guest: the System displays the Guest's Home/Search page.
+                \item For Admin: the System displays the Admin Dashboard.
+                \item For Host: the System displays the Host Dashboard.
+            \end{itemize}
+            \vspace{-0.4cm}
+        \end{enumerate}
+        \\ \hline
+        Postconditions &
+        \vspace{-0.3cm}
+        \begin{itemize}
+            \item If \ref{login-fork}\ref{login-success} taken: the User is logged in and:
+            \begin{itemize}
+                \item For Guest: the System displays the Guest's Home/Search page.
+                \item For Admin: the System displays the Admin Dashboard.
+                \item For Host: the System displays the Host Dashboard.
+            \end{itemize}
+            \item If \ref{login-fork}\ref{login-failure} taken: the System displays the Landing Page, along with a notification about the login issue encountered.
+            \vspace{-0.4cm}
+        \end{itemize}
+        \\ \hline
+    \end{tabular}
+    \caption{Use Case Snippet 1: Log in}
+    \label{use_case_s1}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| q | p{12cm}@\qquad |}
+      \hline
+      Use case snippet & Log out \\ \hline
+      Description & An Admin, Guest or Host logs out of the System.\\ \hline
+      Primary Actor & Admin/Guest/Host (henceforth, "the User") \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & None (the User is logged in)
+      \\ \hline
+      Main Flow &
+      \vspace{-0.3cm}
+        \begin{enumerate}
+            \item The use case snippet starts when the User issues a request to log out.
+            \item (END)The System allows the User to log out, and displays the Landing Page.
+            \vspace{-0.4cm}
+        \end{enumerate}
+        \\ \hline
+        Postconditions & The User is logged out and the System displays the Landing Page.
+        \\ \hline
+    \end{tabular}
+    \caption{Use Case Snippet 2: Log out}
+    \label{use_case_s2}
+  \end{table}
+
+
+\section{Users}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| a | p{12cm}@\qquad |}
+      \hline
+      ID & U-C-2 \\ \hline
+      Use case & Create User \\ \hline
+      Description & An Admin creates a new User.\\ \hline
+      Primary Actor & Admin \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & The Admin is viewing their Dashboard.
+      \\ \hline
+      Main Flow &
+        \begin{enumerate}
+            \item The use case starts when the Admin issues a request to create a User. 
+            \item The System provides the Admin with a means to fill in the User Details for the new User.
+            \item \label{u-c-2-admin-fork}
+            \begin{enumerate}
+                \item \label{u-c-2-no-cancel}If the Admin provides the User Details: go to \ref{u-c-2-submit}.
+                \item \label{u-c-2-cancel} If the Admin cancels the operation: go to \ref{u-c-2-user-list}.
+            \end{enumerate}
+            \item \label{u-c-2-submit} The Admin submits the User Details.
+            \item \label{u-c-2-user-fork} The System checks the User Details.
+            \begin{enumerate}
+                \item \label{u-c-2-correct-details}If the User Details are Correct: the System creates a new User based on the details provided.
+                \item \label{u-c-2-incorrect-details} If the User Details are not Correct: the System displays a notification about the details causing the problem. Return to 2.
+            \end{enumerate}
+            \item \label{u-c-2-user-list} (END) The System displays the Admin's Dashboard.
+        \end{enumerate}
+        \\ \hline
+        Postconditions &
+            The System displays the Admin's Dashboard and:
+            \begin{itemize}
+                \item If \ref{u-c-2-admin-fork}\ref{u-c-2-no-cancel}. and \ref{u-c-2-user-fork}\ref{u-c-2-correct-details}. taken: a User has been created. The User details correspond to those specified during the creation process.
+            \end{itemize}
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case U-C-2: Create User}
+    \label{use_case_u-c-2}
+  \end{table}
+
+  Note that the above is mainly for creating new Admin accounts. An existing Admin would first create the account, and the new Admin can then change their password.
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| q | p{12cm}@\qquad |}
+      \hline
+      ID & U-E \\ \hline
+      Use case & Edit User \\ \hline
+      Description &
+        A Guest or Host edits their own Core User Details, or an Admin edits any User's User Details. (Henceforth, we will refer to the Primary Actor as "User", and to the User being acted upon as "Target User".)
+      \\ \hline
+      Primary Actor & Guest/Admin/Host \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & 
+      \begin{itemize}
+        \item Guest/Host: None.
+        \item Admin: The Admin is viewing their Dashboard.
+      \end{itemize}
+      \\ \hline
+      Main Flow &
+        \begin{enumerate}
+            \item The use case starts when the User issues a request to view and edit the Target User's User Details.
+            \item The System displays the Target User's User Details, and provides the User with a means to edit these details.
+            \item \label{u-e-cancel-fork}
+            \begin{enumerate}
+                \item \label{u-e-no-cancel} If the User edits the User Details, or leaves them unchanged: go to \ref{u-e-submit}.
+                \item \label{u-e-cancel} If the User cancels the operation: go to \ref{u-e-end}.
+            \end{enumerate}
+            \item \label{u-e-submit} The User submits the User Details.
+            \item \label{u-e-correct-fork} The System checks the User Details.
+            \begin{enumerate}
+                \item \label{u-e-correct-details} If the User Details are Correct: the System updates the Target User based on the details provided.
+                \item \label{u-e-incorrect-details} If the User Details are not Correct: the System displays a notification about the details causing the problem. Return to 2.
+            \end{enumerate}
+            \item \label{u-e-end} (END) The System displays the Target User's User Details.
+        \end{enumerate}
+        \\ \hline
+        Postconditions & 
+            The System displays the Target User's User Details and:
+            \begin{itemize}
+                \item If \ref{u-e-cancel-fork}\ref{u-e-no-cancel}. and \ref{u-e-correct-fork}\ref{u-e-correct-details}. taken: the Target User has been updated with the details specified during the editing process.
+            \end{itemize}
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case U-E: Edit User}
+    \label{use_case_u-e}
+  \end{table}
+
+  Note the following caveats to the above: a User's password is never displayed, an Admin cannot edit a User's password, and an Admin cannot view or edit any User's Payment Details.
+
+  \section{Properties}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| h | p{12cm}@\qquad |}
+      \hline
+      ID & P-E \\ \hline
+      Use case & Edit Property \\ \hline
+      Description & The Host edits their Property's Core Property Details.\\ \hline
+      Primary Actor & Host \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & The Host has a Property registered on their account.
+      \\ \hline  
+      Main Flow &
+        \begin{enumerate}
+            \item The use case starts when the Host issues a request to edit their Property's Core Property Details.
+            \item The System provides the Host means to edit the Core Property Details
+            \item \label{p-e-host-fork}
+            \begin{enumerate}
+                \item \label{p-e-no-cancel}If the Host edits the Core Property Details, or leaves them unchanged: go to \ref{p-e-submit}.
+                \item \label{p-e-cancel} If the Host cancels the operation: go to \ref{p-e-end}.
+            \end{enumerate}
+            \item \label{p-e-submit} The Host submits the Core Property Details.
+            \item \label{p-e-property-fork} The System checks the Core Property Details.
+            \begin{enumerate}
+                \item \label{p-e-correct-details} If the Core Property Details are Correct: the System updates the Property based on the details provided.
+                \item \label{p-e-incorrect-details} If the Core Property Details are not Correct: the System displays a notification about the details causing the problem. Return to 2.
+            \end{enumerate}
+            \item \label{p-e-end} (END) The System displays the Property Details for the Property.
+        \end{enumerate}
+        \\ \hline
+        Postconditions &
+        The System displays the Property's Property Details and:
+        \begin{itemize}
+            \item If \ref{p-e-host-fork}\ref{p-e-no-cancel}. and \ref{p-e-property-fork}\ref{p-e-correct-details}. taken: the Property's Core Property Details have been updated with the details specified during the editing process. The System displays the Property's Property Details.
+        \end{itemize}
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case P-E: Edit Property}
+    \label{use_case_p-e}
+  \end{table}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| z | p{12cm}@\qquad |}
+      \hline
+      ID & P-D \\ \hline
+      Use case & Delete Property \\ \hline
+      Description & A Host or an Admin (henceforth, "the User") deletes a Property and all associated entities (Bookings, Ratings and Favourites entries).\\ \hline
+      Primary Actor & Host/Admin   \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions &
+      \begin{itemize}
+        \item Host: The Host has a Property registered on their account.
+        \item Admin: The Adming is viewing the Property Details for the Property to be deleted.
+      \end{itemize}
+      \\ \hline
+      Main Flow &
+        \begin{enumerate}
+            \item The use case starts when the User issues a request to delete the Property.
+            \item The System asks the User for confirmation.
+            \item \label{p-d-confirm-fork}
+            \begin{enumerate}
+                \item \label{p-d-confirm}If the User confirms the deletion: go to \ref{p-d-email}.
+                \item \label{p-d-cancel}(END) If the User cancels the operation: the System displays the Property Details for the Property.
+            \end{enumerate}
+            \item \label{p-d-email} The System sends email notifications to all Guests that have a Booking for the Property with a future Check-In Date.
+            \item The System deletes the Property; all Ratings associated with Bookings for the property; all Bookings for the Property; and removes the Property from all Favourites lists.
+            \item (END)
+            \begin{itemize}
+                \item For Host: the System displays the Host Dashboard.
+                \item For Admin: the System displays a Property List. If the Admin reached the Precondition by applying some Property Search Conditions or Property Sort Criteria, the List will conform to these.
+            \end{itemize}
+        \end{enumerate}
+        \\ \hline
+        Postconditions &
+        \begin{itemize}
+            \item If \ref{p-d-confirm-fork}\ref{p-d-confirm}. taken: The Property and all associated entities (Bookings, Ratings and Favourites entries) have been deleted, and Guests with a Booking for the Property with a future Check-In Date have received email notifications.
+            \begin{itemize}
+                \item For Host: the System displays the Host Dashboard.
+                \item For Admin: the System displays a Property List. If the Admin reached the Precondition by applying some Property Search Conditions or Property Sort Criteria, the List will conform to these.
+            \end{itemize}
+            \item If \ref{p-d-confirm-fork}\ref{p-d-cancel}. taken: the System displays the Property Details for the Property, which has not been deleted.
+        \end{itemize}
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case P-D: Delete Property}
+    \label{use_case_p-d}
+  \end{table}
+
+  Note that deleting Properties is intended to be a "soft"/"logical" delete: records and details are to be kept on the System.
+
+\section{Bookings}
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| z | p{12cm}@\qquad |}
+      \hline
+      ID & B-L-2 \\ \hline
+      Use case & View Property Bookings \\ \hline
+      Description & A Host views their own Property's Bookings, or an Admin views any Property's Bookings. (Henceforth, we will refer to the Primary Actor as "User".)\\ \hline
+      Primary Actor & Host/Admin\\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions &
+      The User is viewing the Property's Property Details.
+      \\ \hline
+      Main Flow &
+      \vspace{-0.3cm}
+        \begin{enumerate}
+            \item The use case starts when the User issues a request to view the Property's Bookings.
+            \item  \label{b-l-2-list} (POSSIBLE END) The System checks whether the Property Bookings are in Future mode or Past mode, and:
+            \begin{enumerate}
+                \item If the Property Bookings are in Future mode: The System displays all of the Property's Future Bookings and provides the User a means to switch to Past mode.
+                \item If the User Bookings are in Past mode: The System displays all of the Property's Past Bookings and provides the User a means to switch to Future mode.
+            \end{enumerate}
+            \item If the User switches the Property Bookings mode: return to \ref{b-l-2-list}.
+            \vspace{-0.4cm}
+        \end{enumerate}
+        \\ \hline
+        Postconditions & The System displays either the Property's Past Bookings, or the Property's Future Bookings. (These might be empty lists.)
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case B-L-2: View Property Bookings}
+    \label{use_case_B-L-2}
+  \end{table}
+
+\section{Favourites}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{| g | p{12cm}@\qquad |}
+      \hline
+      ID & F-D \\ \hline
+      Use case & Remove from Favourites \\ \hline
+      Description & A Guest removes a Property from their Favourites.\\ \hline
+      Primary Actor & Guest \\ \hline
+      Secondary Actor(s) & None \\ \hline
+      Preconditions & 
+      \begin{enumerate}[label=\Alph*]
+        \item \label{f-d-list} The Guest is viewing their Favourites.
+        \item \label{f-d-details}The Guest is viewing the Property Details for the Property which is to be removed from their Favourites.
+    \end{enumerate}
+      \\ \hline
+      Main Flow &
+        \begin{enumerate}
+            \item The use case starts when the Guest issues a request to remove the Property from their Favourites.
+            \item The System asks the Guest for confirmation.
+            \item \label{f-d-cancel-fork}
+            \begin{enumerate}
+                \item \label{f-d-nocancel}If the Guest confirms the removal: go to \ref{f-d-removal}.
+                \item If the Guest cancels the operation: go to \ref{f-d-end}.
+            \end{enumerate}
+            \item \label{f-d-removal} The System removes the Property from the Guest's Favourites.
+            \item \label{f-d-end} (END)
+            \begin{enumerate}
+                \item For Precondition \ref{f-d-list}: the System displays the Guest's Favourites.
+                \item For Precondition \ref{f-d-details}: the System displays the Property Details.
+            \end{enumerate}
+        \end{enumerate}
+        \\ \hline
+        Postconditions &
+        \begin{itemize}
+            \item If \ref{f-d-cancel-fork}\ref{f-d-nocancel} taken: The Property has been removed from the Guest's Favourites.
+            \item In any case:
+            \begin{itemize}
+                \item For Precondition \ref{f-d-list}: the System displays the Guest's Favourites.
+                \item For Precondition \ref{f-d-details}: the System displays the Property Details. If \ref{f-d-cancel-fork}\ref{f-d-nocancel} taken: the Favourites symbol has been removed.
+            \end{itemize}
+        \end{itemize}
+         \\ \hline
+    \end{tabular}
+    \caption{Use Case F-D: Remove from Favourites}
+    \label{use_case_f-d}
+  \end{table}

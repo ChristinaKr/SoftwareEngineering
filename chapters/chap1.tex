@@ -1,0 +1,104 @@
+\chapter{Introduction}
+\label{introduction}
+
+\section{Background}
+
+This report sets out the processes undertaken in the design of a software system serving the Bed and Breakfast (B\&B) industry in the UK which will enable prospective guests to search for and make bookings for available accommodation.
+
+It describes the design of \textit{Room.io}, a software system serving the B\&B industry in the UK. It will be the first choice platform for owner-operators of B\&B properties to receive bookings for their accommodation and for prospective guests to search for and make bookings on available dates.
+
+In designing the system, the group has sought to put into practice the principles covered in the Software Engineering module at UCL, notably the Unified Software Development Process (USDP). The chapters below set out the stages in the design process and through commentary and illustrations/diagrams demonstrate the methodology involved in designing a system up to the point where it can be implemented by software programmers.
+
+\begin{table}[H]
+    \centering
+    \label{team_members}
+    \begin{tabular}{| l | l |}
+      \hline
+        \rowcolor{lightgray} \textbf{Name} & \textbf{Email} \\ \hline
+        Aleksi Anttila        & aleksi.anttila.17@ucl.ac.uk     \\ \hline
+        Christina Kronser     & christina.kronser.17@ucl.ac.uk  \\ \hline
+        Kai Klasen            & kai.klasen.17@ucl.ac.uk         \\ \hline
+        Lorenz Luboldt	      & lorenz.luboldt.17@ucl.ac.uk     \\ \hline
+        Michael Aring	      & michael.aring.17@ucl.ac.uk      \\ \hline
+        Paul Venhaus	      & paul.venhaus.17@ucl.ac.uk       \\ \hline
+        Philip Spencer	      & philip.spencer.17@ucl.ac.uk     \\ \hline
+        Zaid Al Lahham	      & zaid.lahham.16@ucl.ac.uk        \\ \hline
+    \end{tabular}
+    \caption{Team Members}
+\end{table}
+
+\section{Problem Statement}
+
+B\&B's are a popular type of accommodation for tourists around the world. Especially in the countryside, B\&B's are highly sought after \cite{thebnbindustry}. They provide a level of intimacy to their location unmatched by competing larger hotels.
+
+Modern travellers require a well-designed platform that allows them to quickly find the properties and rooms that fit their personal criteria. The platform should further allow them to get insight into the experiences of fellow travellers who have frequented a B\&B before and left a rating summarising their experience.
+Since B\&B's are much smaller in size than hotels --- offering on average six rooms per location \cite{thebnbindustry} --- their operators can benefit immensely from a centralised platform that connects the properties with prospective guests and thus alleviates them from having to rely on advertisements or booking agencies and other middlemen.
+
+\section{Project Scope}
+This report outlines the design of the modern web application \textit{Room.io} for B\&B operators and their prospective customers. It serves as a platform on which B\&B operators can display their accommodation and on which potential guests can search for these accommodations according to their specific criteria and subsequently book and pay for a stay within their selected date range.
+
+A potential guest using \textit{Room.io} will be able to search for B\&B's using a variety of criteria such as the B\&B's location, specific dates or the rating that other users have assigned to the property. Using the information stored within the system, such as room availability based on scheduled bookings, the service is then able to present the user with a selection of the properties that best match their interests. Next, the users are able to select properties, read a longer description and inspect the property's rooms. Here they will also be able to learn more about the specific policies and amenities concerning each room, such as whether smoking is allowed or whether the room is wheelchair accessible. Users are also able to place their most liked B\&B's on a favourites list which enables them to quickly access these properties. This way the properties can easily be recalled once it is time to make a booking decision. To facilitate the placement of bookings, \textit{Room.io} stores the payment details of its users so that the payment process can be handled with great user-friendliness. It further sends out notification emails informing both host and guest about the newly created booking.
+
+Hosts that sign up to the system can publish their property and provide a description as well as pictures to give guests a thorough impression of the accommodation. Next, they can add rooms. Here, \textit{Room.io} allows hosts to define the aforementioned policies on a room-by-room basis. Through this, hosts can highlight the different features of each space. They can next set the prices of each room for both single and double occupation. Due to its easy searching and filtering capabilities, \textit{Room.io} allows B\&B property owners to be connected to the target audience that best matches their offering and significantly reduces search costs.
+
+\subsection{Constraints}
+This project was a student project, undertaken as part of the course COMPGC06 Software Engineering at the University College London. Due to the course's structure, the students learned about the different aspects of the USDP as well as the topic of Software Engineering in general while working on the project. This meant that many iterations and revisions were necessary to improve previously created content based on newly acquired learnings.
+As per the project definition put forth by the course coordinators, the project did not involve implementation. Therefore, there has not been an opportunity for testing or further requirements iteration beyond the design stage. However, we have endeavoured to contemplate and address potential problem areas as far as possible. 
+
+\section{Approach}
+From the beginning on the project team placed a high emphasis on taking an efficient and effective systematic approach to software engineering, both out of interest in the topic and because this best reflected the intended outcome of the course.
+
+The project was undertaken from the 25th of January until the 21st of March 2018. The various stages in the design process are shown in the Gantt chart below (Figure \ref{gantt-chart}). Whilst these stages have a natural sequential flow as the design process moves toward implementation, there was also a recurrent need to revisit and revise earlier stages. For this reason, the team decided to follow an Agile development process, as opposed to the traditional sequential Waterfall model of software development.
+
+The team met up regularly with their supervisor to ensure that they were applying their learnings in the most productive fashion. Each part of the report was frequently iterated upon, as regular meetings and consultation would bring to light issues that merited modifications of the earlier treatment of relevant areas. This iterative approach was especially evident in the definition of requirements and use cases which went through numerous changes to ensure that they best represented the actual demands of the system. 
+
+Apart from meeting with their supervisor, the team also conducted frequent internal Scrum meetings, both face-to-face as well as digitally through services such as Google Hangouts and Slack. These meetings were usually attended by various subgroups of the larger team who were tasked with a certain sprint within the project. Here, each team member could report on their progress and receive feedback and clarifications to ensure a maximum cohesiveness of the overall report.
+
+ % Presumed project range: 25.1.18 - 21.3.18
+ \begin{figure}[H]
+ 	\centering
+    \label{gantt-chart}
+    \begin{ganttchart}[
+        vgrid,
+        x unit=2.2mm,
+        time slot format=little-endian
+    ]{25-1-2018}{21-3-2018}
+    \gantttitlecalendar{month=name} \\
+    \gantttitle{W1}{7}
+    \gantttitle{W2}{7}
+    \gantttitle{W3}{7}
+    \gantttitle{W4}{7}
+    \gantttitle{W5}{7}
+    \gantttitle{W6}{7}
+    \gantttitle{W7}{7}
+    \gantttitle{W8}{7} \\
+    \ganttbar{Kick-Off}{25-1-2018}{25-1-2018} \\
+    \ganttbar{Research}{25-1-2018}{1-2-2018} \\
+    \ganttbar{Requirements}{25-1-2018}{13-2-2018} \\
+    \ganttbar{Use Cases}{2-2-2018}{1-3-2018} \\
+    \ganttbar{Class Diagrams}{12-2-2018}{5-3-2018} \\
+    \ganttbar{Domain Model}{10-2-2018}{15-2-2018} \\
+    \ganttbar{Sequence Diagrams}{15-2-2018}{8-3-2018} \\
+    \ganttbar{Activity Diagrams}{15-2-2018}{10-3-2018} \\
+    \ganttbar{Report Draft}{5-3-2018}{15-3-2018} \\
+    \ganttbar{Finalize Report}{15-3-2018}{21-3-2018} \\
+    \ganttbar{Video Production}{20-3-2018}{21-3-2018}
+    \end{ganttchart}
+    \caption{Project Timeline}
+\end{figure}
+
+\section{Overview}
+
+\subsection{Requirements}
+The report begins with the listing of both functional and non-functional requirements. Next, a Domain Model is presented which provides an overview of the how the system will operate. In the Domain Model, a high-level view of the system is taken to diagrammatically capture the relationships of the main entities with the separate areas that were identified within the system. This forms the basis for specifying the methods and objects that will be created in the implementation stage.
+
+\subsection{Use Cases}
+The use case specifications look at the behaviour of each key actor with regard to the system and provide a trail between the requirements and the way the system is being designed to function. From this analysis, it is then possible to further analyse the sequence of activities that will govern the final design of the system. 
+
+\subsection{Object-Oriented Analysis and Design Models}
+The requirements and use cases set out in the previous chapters identify the main attributes of the proposed system to ensure it delivers the intended functionality to the key actors. The next phase is to set out the system so that the concept can be translated into a model which software engineers can program and implement. This is done firstly through an Analysis Class diagram and then progresses to Sequence Diagrams. The stage of the process is referred to as "Object-Orientated Analysis" as the preparation for implementation involves setting out the objects and their methods that will deliver the required functionality.
+
+The Analysis Class Diagram highlights the main classes, objects and behaviours in the process and their general interaction. It can then be represented with greater detail in terms of classes, interaction, objects and methods. This is the Design Class Diagram, which is produced as a further guide to the system implementers. The Sequence Diagrams drill down into component actions to illustrate the interaction between these classes when the action occurs. That action may be, for example, the registration of a property. Next, the Activity Diagrams show the activity-oriented dynamic behaviour that can occur within the system. A Component Diagram captures the component structure by visualising how the different components of the system are connected through their provided interfaces. Lastly, the Deployment diagram outlines the topology of the system in terms of hardware, software and their connections and an exemplary state-machine diagram gives an indication of a discrete behaviour of a part of the designed system through state transitions \cite{UML2017}.
+
+\subsection{Application Mock-Up}
+At the end of the report, an application mock-up and user manual is presented which envisions the front-end of the previously described system.

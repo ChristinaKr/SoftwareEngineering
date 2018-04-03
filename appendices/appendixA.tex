@@ -1,0 +1,82 @@
+\chapter{Glossary}
+\label{appendix:glossary}
+
+\textbf{Admin}---The administrator of the system is in charge to monitor and ensure the System's correct operation.
+
+\textbf{Admin's Dashboard}---The page that an Admin sees when they log in. It should allow the Admin to gain access to a list of Users, a list of Properties, and a list of Policies, along with related functionality.
+
+\textbf{Booking}---A Guest's explicit confirmation to stay at a Property's room within an agreed-upon time frame (the representation of such on the System).
+
+\begin{itemize}
+    \item \textbf{Cancellable Booking}---A Booking that is not already Cancelled and whose check-in date is more than two days in the future.
+    \item \textbf{Cancelled Booking}---A Booking cancelled by either the Guest who initially booked it, or by the Host for whose Property the Booking was for. The Booking is still on the System, but it is flagged as cancelled in the User/Property Bookings, and does not factor into the availability of Rooms.
+    \item \textbf{Confirmed Booking}---A Booking that is not Cancelled.
+    \item \textbf{Future Booking}---A Booking whose check-out date is in the future.
+    \item \textbf{Past Booking}---A Booking whose check-out date is in the past.
+    \item \textbf{Property Bookings}---The Bookings made for a specific Property.
+    \item \textbf{User Bookings}---The Bookings made by a specific Guest.
+\end{itemize} 
+
+\textbf{Booking Details}---The details associated with each Booking. These include the check-in date (start date), check-out date (end date), price (amount paid), status (Confirmed or Cancelled), the User that made the Booking, the User's Payment Details, and the Room and Property the Booking is for.
+\begin{itemize}
+    \item \textbf{Core Booking Details}---A set of Booking Details excluding the Payment Details and status.
+    \item \textbf{Correct Core Booking Details}---A set of Core Booking Details that is complete (no details are missing) and correctly specified. 
+    \item \textbf{Initial Booking Details}---Check-in date, check-out date, Room(s) and Property.
+    \item \textbf{Locked Initial Booking Details}---A set of Initial Booking Details such that the System is temporarily treating the Rooms selected as unavailable for the selected check-in date and check-out date.
+    \item \textbf{Possible Initial Booking Details}---A set of Initial Booking Details such that no detail is missing and the Rooms selected are still available for the selected check-in date and check-out date.
+\end{itemize} 
+
+\textbf{Guest}---A User that is in the process of, or, that has successfully completed a Booking in the B\&B Booking System.
+
+\textbf{Home/Search Page}---The page that a Guest sees when they log in and which allows the Guest to search for Properties.
+
+\textbf{Host}---A User that is in the process of, or has successfully listed a Property and is able to receive Guests via the B\&B Booking System.
+
+\textbf{Host Dashboard}---The page that a Host sees when they log in. Should allow the Host to issue requests to register a Property or edit an already Registered Property.
+
+\textbf{Landing Page}---What a user who has not logged into the System should see. Should allow for users logging in and registering.
+
+\textbf{Payment Details}---Associated with a specific User. These include the name on the User's debit/credit card, the card number, its expiration date, and its security number. Only ever displayed to the User associated with them.
+
+\textbf{Policy}---The representation of some B\&B Room detail or rule on the System (some examples: "2-person", "non-smoking", "pet-friendly"). Associated with a Room. A Room can have multiple Policies associated with it.
+
+\textbf{Policy Name}---The only detail of a Policy. No two policies may have the same Name.
+
+\textbf{Property}---The representation of a B\&B on the System. Associated with a Host. A Host may only have one Property associated with their account. Each Property may have multiple Rooms associated with it.
+
+\textbf{Property Details}---The information associated with each Property that is shown to all Users. Includes the Property description, its address, pictures, arrival times, departure times, ratings, Rooms, Policies associated with those Rooms, and Room availability data for different dates.
+\begin{itemize}
+    \item \textbf{Core Property Details}---The Property Details that a Host needs to specify when registering a Property. These include the description, the address, pictures, arrival times, departure times, Rooms, and Policies associated with those Rooms.
+    \item \textbf{Correct Property Details}---A set of Core Property Details such that is complete (no details are missing) and correctly specified.
+    \item \textbf{Host-Specific Property Details}---Includes the usual Property Details, along with statistics about the number of rooms available overall, etc.
+\end{itemize}
+
+\textbf{Property Search Conditions}---The conditions by which Users can filter Properties. These include location, availability for a certain number of Guests for a specific set of dates, average stars, price, arrival times, departure times, and the presence of Rooms with specific Policies.
+
+\textbf{Property Sort Criteria}---The conditions by which Users can order Properties. These include proximity to a location, average stars, and price.
+
+\textbf{Rating}---Evaluation of a Booking that a Guest can undertake upon completion of a stay at a B\&B. A Rating is uniquely linked with a Booking, a Property, and a Guest. It consists of a title, a comment and a Rating value.
+
+\textbf{Rating Details}---The title, comment and Rating value (from one star to five) of a Rating.
+\begin{itemize}
+    \item \textbf{Correct Rating Details} A set of Rating Details that is complete (no details are missing) and correctly specified.
+\end{itemize}
+
+\textbf{Property}---The representation of a B\&B room on the System. Associated with a Property. May have multiple Policies associated with it.
+
+\textbf{System}---The website and all its related technical components.
+
+\textbf{User}---A User is an Admin, Host, Guest or Visitor.
+\begin{itemize}
+    \item \textbf{Unverified User}---A User banned by an Admin.
+\item \textbf{Unverified User}---A User who has not yet confirmed that their provided email address belongs to them cannot log into the System.
+\item \textbf{Verified User}---A User who has confirmed that their provided email address belongs to them is able to log in. 
+\end{itemize}
+
+\textbf{User Details}---The details held for each User: email address, password, name, date of birth, Role, passport number, address, gender, status (Verified, Unverified or Banned) and Payment Details. No two users may have the same email address. Details that are irrelevant for a User with a specific Role are represented by empty strings or special characters---an Admin, for instance, need not have a passport number.\footnote{To explain the rationale for this a little further: the number of Admins on the System will be very low, so we decided that storing a uniform set of data for each User with the occasional missing details represented by special characters would be more efficient than creating a specialized Admin class.}
+\begin{itemize}
+    \item \textbf{Core User Details}---The User Details for a User, excluding status and Role.
+    \item \textbf{Correct Core User Details}---A set of Core User Details that is complete (no details are missing) and correctly specified (the email is a valid email address, the passport number is a valid passport number, etc., and and the email address is unique.) These constraints are different for Users with different Roles: an Admin, for instance, need not specify a passport number.
+\end{itemize}
+
+\textbf{Visitor}---Someone using the System without having created an account yet.

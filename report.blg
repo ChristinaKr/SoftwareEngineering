@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: report.aux
+A level-1 auxiliary file: frontmatter/titlepage.aux
+A level-1 auxiliary file: frontmatter/abstract.aux
+A level-1 auxiliary file: frontmatter/toc.aux
+A level-1 auxiliary file: frontmatter/lof.aux
+A level-1 auxiliary file: frontmatter/lot.aux
+I couldn't open auxiliary file introduction.aux
+---line 27 of file report.aux
+ : \@input{introduction.aux
+ :                         }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapters/chap1.aux
+A level-1 auxiliary file: chapters/chap2.aux
+A level-1 auxiliary file: chapters/chap3.aux
+A level-1 auxiliary file: chapters/chap4.aux
+A level-1 auxiliary file: chapters/chap5.aux
+A level-1 auxiliary file: chapters/chap6.aux
+A level-1 auxiliary file: appendices/appendixA.aux
+A level-1 auxiliary file: appendices/appendixB.aux
+A level-1 auxiliary file: appendices/appendixC.aux
+A level-1 auxiliary file: appendices/appendixD.aux
+A level-1 auxiliary file: bibliography.aux
+The style file: IEEEtranN.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibliography.bib
+-- IEEEtranN.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Natbib version - not for normal IEEE work.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--empty journal in Boehm1988
+
+Done.
+You've used 13 entries,
+            4855 wiz_defined-function locations,
+            1030 strings with 9915 characters,
+and the built_in function-call counts, 6284 in all, are:
+= -- 524
+> -- 141
+< -- 12
++ -- 70
+- -- 38
+* -- 277
+:= -- 1100
+add.period$ -- 26
+call.type$ -- 13
+change.case$ -- 20
+chr.to.int$ -- 13
+cite$ -- 14
+duplicate$ -- 445
+empty$ -- 586
+format.name$ -- 61
+if$ -- 1356
+int.to.chr$ -- 1
+int.to.str$ -- 14
+missing$ -- 83
+newline$ -- 75
+num.names$ -- 39
+pop$ -- 300
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 2
+skip$ -- 475
+stack$ -- 0
+substring$ -- 27
+swap$ -- 210
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 160
+warning$ -- 1
+while$ -- 26
+width$ -- 0
+write$ -- 155
+(There was 1 error message)
